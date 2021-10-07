@@ -125,7 +125,7 @@ const Sidebar: React.FC = () => {
   return (
     <React.Fragment>
       <MobileHeader>
-        <MobileDrawerOpen onClick={() => setDrawerExpanded(true)}><GiHamburgerMenu size={20} color="white" /></MobileDrawerOpen>
+        <MobileDrawerOpen onClick={() => setDrawerExpanded(true)}><GiHamburgerMenu size={16} color="white" /></MobileDrawerOpen>
       </MobileHeader>
 
       <StickyContainer isExpanded={drawerExpanded}>

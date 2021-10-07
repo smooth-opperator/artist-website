@@ -18,11 +18,18 @@ export const MobileHeader = styled.div`
 `;
 
 const sharedIconButtonStyles = `
+  display: flex;
   background: none;
   border: none;
   height: 30px;
   width: 30px;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    flex-shrink: 0;
+  }
 `;
 
 export const MobileDrawerOpen = styled.button`
@@ -32,7 +39,7 @@ export const MobileDrawerOpen = styled.button`
   }
 
   @media screen and (max-width: 411px) {
-    margin-left: -26px;
+    margin-left: -25px;
   }
 `;
 
@@ -40,10 +47,9 @@ export const MobileDrawerClose = styled.button`
   display: none;
 
   @media screen and (max-width: 1024px) {
-    display: block;
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 0;
     z-index: 3;
     ${sharedIconButtonStyles};
   }
