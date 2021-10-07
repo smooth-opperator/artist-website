@@ -2,6 +2,7 @@
   "name": "julie-oppermann-artist-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://smooth-opperator.github.io/artist-website",
   "dependencies": {
     "@apollo/client": "^3.4.11",
     "@testing-library/jest-dom": "^5.14.1",
@@ -30,7 +31,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen": "graphql-codegen --require dotenv/config --config codegen.yml"
+    "codegen": "graphql-codegen --require dotenv/config --config codegen.yml",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +59,7 @@
     "@graphql-codegen/typescript-operations": "2.1.4",
     "@graphql-codegen/typescript-react-apollo": "3.1.4",
     "@types/lodash.debounce": "^4.0.6",
-    "@types/styled-components": "^5.1.14"
+    "@types/styled-components": "^5.1.14",
+    "gh-pages": "^3.2.3"
   }
 }
