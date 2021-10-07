@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  background-image: url("/bodybackground.jpg");
+  background-image: url("./bodybackground.jpg");
   height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
