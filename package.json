@@ -2,7 +2,7 @@
   "name": "julie-oppermann-artist-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://smooth-opperator.github.io/artist-website",
+  "homepage": "http://smooth-opperator.github.io/artist-website.git",
   "dependencies": {
     "@apollo/client": "^3.4.11",
     "@testing-library/jest-dom": "^5.14.1",
