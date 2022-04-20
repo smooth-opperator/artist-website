@@ -2,9 +2,9 @@ import React from "react";
 import parse from 'html-react-parser';
 
 import { useInfoListQuery } from "../../generated/graphql";
-import { GalleryImageContainer, GalleryItem, SectionContainer, SectionItem, SectionItemTitle, SectionTitle } from "../../styles";
+import { SectionContainer, SectionItem, SectionItemTitle, SectionTitle } from "../../styles";
 import LoadingSpinner from "../LoadingSpinner";
-import { InfoItem, SectionItemStyled } from "./styles";
+import { InfoItem, SectionItemStyled, CV } from "./styles";
 
 const InfoList: React.FC = () => {
   const { data, error, loading } = useInfoListQuery();
@@ -28,13 +28,11 @@ const InfoList: React.FC = () => {
           {parse(news?.html || "")}
         </InfoItem>
       </SectionItemStyled>
-      <SectionItem id={cv?.id}>
+      <SectionItem id="cv">
         <SectionItemTitle>CV</SectionItemTitle>
-        <GalleryItem>
-          <GalleryImageContainer>
-            <img src={cv?.url} alt={cv?.url} />
-          </GalleryImageContainer>
-        </GalleryItem>
+        <CV>
+          {parse(cv?.html || "")}
+        </CV>
       </SectionItem>
       <SectionItemStyled id="imprint">
         <SectionItemTitle>IMPRINT</SectionItemTitle>

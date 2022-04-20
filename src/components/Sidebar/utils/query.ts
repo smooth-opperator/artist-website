@@ -17,7 +17,7 @@ export const QUERY_SIDEBAR = gql`
     infos {
       id
       cv {
-        id
+        __typename
       }
       news {
         __typename

@@ -30,3 +30,9 @@ export const InfoItem = styled.div`
     text-decoration: none;
   }
 `;
+
+export const CV = styled(InfoItem)`
+  em {
+    margin-left: 40px;
+  }
+`;

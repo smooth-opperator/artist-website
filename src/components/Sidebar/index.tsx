@@ -58,7 +58,7 @@ const Sidebar: React.FC = () => {
         const selectedExhibition = exhibitions && findElem(exhibitions);
         const selectedInstallation = installations && findElem(installations);
         const selectedVideo = videos && findElem(videos);
-        const selectedInfo = infos && findElem([{ id: infos[0].cv?.id || "" }, { id: 'news' }, { id: 'imprint' }]);
+        const selectedInfo = infos && findElem([{ id: "cv" }, { id: 'news' }, { id: 'imprint' }]);
 
         if (selectedExhibition && itemId) {
           setActiveItem(itemId);
@@ -152,7 +152,7 @@ const Sidebar: React.FC = () => {
                 {SectionEnum.Info.toLowerCase()}
               </Subtitle>
               <ListItem key='news' onClick={() => scrollTo('news')} isActive={!!(activeItem === 'news')}>News</ListItem>
-              <ListItem key={infos[0].cv?.id} id={`testing-${infos[0].cv?.id}`} onClick={() => scrollTo(infos[0].cv?.id || "")} isActive={!!(activeItem === infos[0].cv?.id)}>CV</ListItem>
+              <ListItem key='cv' onClick={() => scrollTo('cv')} isActive={!!(activeItem === 'cv')}>CV</ListItem>
               <ListItem key='imprint' onClick={() => scrollTo('imprint')} isActive={!!(activeItem === 'imprint')}>Imprint</ListItem>
             </Section>
           )}

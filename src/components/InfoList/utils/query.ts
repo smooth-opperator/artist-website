@@ -5,8 +5,9 @@ export const QUERY_INFO_LIST = gql`
     infos {
       id
       cv {
-        id
-        url
+        html
+        text
+        markdown
       }
       news {
         html
